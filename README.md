@@ -1,5 +1,7 @@
 # create-react-app
 - Installed TailwindCSS
+- Login form
+_ Sign up form
 
 # Features
 - Browse
