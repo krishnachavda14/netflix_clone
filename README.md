@@ -3,6 +3,8 @@
 - Login form
 - Sign up form
 - I have used google firebase for authentication
+- Implement signin user api
+- Created our redux store with userSlice
 
 # Features
 - Browse
