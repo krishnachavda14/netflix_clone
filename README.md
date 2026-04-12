@@ -1,7 +1,8 @@
 # create-react-app
 - Installed TailwindCSS
 - Login form
-_ Sign up form
+- Sign up form
+- I have used google firebase for authentication
 
 # Features
 - Browse
