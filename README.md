@@ -5,6 +5,7 @@
 - I have used google firebase for authentication
 - Implement signin user api
 - Created our redux store with userSlice
+- BugFix - Clean up authentication
 
 # Features
 - Browse
