@@ -3,7 +3,6 @@ import Header from './Header'
 import { validateForm } from '../utils/validate'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../utils/firebase';
-import { useNavigate } from 'react-router-dom';
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
@@ -12,7 +11,6 @@ const PROFILE_IMAGE_URL = "https://media.licdn.com/dms/image/v2/D5635AQFT0sgKc3i
 
 const Login = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [isSignIn, setIsSignIn] = useState(true)
   const [errorMessage, setErrorMessage] = useState(null)
   const name = useRef(null);
@@ -50,7 +48,7 @@ const Login = () => {
               displayName: name.current.value,
               photoURL: PROFILE_IMAGE_URL,
             }));
-            navigate("/browse");
+            
           }).catch((error) => {
             // An error occurred
             // ...
@@ -79,7 +77,7 @@ const Login = () => {
               displayName: user.displayName,
               photoURL: PROFILE_IMAGE_URL,
             }));
-            navigate("/browse");
+           
           }).catch(() => {
             dispatch(addUser({
               uid: user.uid,
@@ -87,7 +85,7 @@ const Login = () => {
               displayName: user.displayName,
               photoURL: user.photoURL || PROFILE_IMAGE_URL,
             }));
-            navigate("/browse");
+  
             // If profile update fails, continue with existing profile data.
           });
           // ...
