@@ -6,6 +6,11 @@
 - Implement signin user api
 - Created our redux store with userSlice
 - BugFix - Clean up authentication
+- Registered for TMDB API and got the access token
+- Adding movie into the movieSlice redux store
+- Created my first hook (useNowPlayingMovies)
+- Building my browse page
+
 
 # Features
 - Browse

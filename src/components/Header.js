@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect } from 'react'
+import { LOGO } from '../utils/constants';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -45,7 +46,7 @@ const Header = () => {
     <div className='flex justify-between absolute top-0 z-10 w-full bg-gradient-to-b from-black px-8 py-4 md:px-16'>
       <img
         className='w-36 md:w-44'
-        src='https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg'
+        src={LOGO}
         alt='logo'
       />
       {user && (
